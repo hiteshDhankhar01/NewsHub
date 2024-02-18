@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import Home from './Home';
 import logo from '../assets/logo.png'
@@ -91,7 +91,7 @@ function Header() {
     // console.log(newsData.length)
 
     const fetchNews = async () => {
-        le.log("fetch news fuction is run")
+        
         setLoading(true);
         const url = `https://newsapi.org/v2/top-headlines?country=${country}&category=${mediaType}&apiKey=7cd22a9824d44a3a936e38a07ba761d8&page=${page}&pageSize=${pageSize}`;
         try {
