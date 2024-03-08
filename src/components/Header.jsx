@@ -91,7 +91,7 @@ function Header() {
     // console.log(newsData.length)
 
     const fetchNews = async () => {
-        
+
         setLoading(true);
         const url = `https://newsapi.org/v2/top-headlines?country=${country}&category=${mediaType}&apiKey=7cd22a9824d44a3a936e38a07ba761d8&page=${page}&pageSize=${pageSize}`;
         try {
@@ -160,11 +160,9 @@ function Header() {
                 </div>
             </header>
             {/* <Home country={country} mediaType={mediaType} /> */}
-            {loading ? (
-                <p>Loading...</p>
-            ) : (
-                <Home data={newsData} />
-            )}
+
+            <Home data={newsData} loading={loading} />
+
         </>
     );
 }
